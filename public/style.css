@@ -1,0 +1,39 @@
+header {
+  text-align: center;
+  font-size: 14pt;
+}
+
+#title {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 16px;
+  font-size: 5vw;
+}
+
+h5 {
+  font-family: monospace;
+  font-size: 15pt;
+}
+
+body {
+  background-color: #fffcf4;
+}
+
+hr {
+  border-top: 1px dashed black;
+}
+
+.button {
+  background-color: #fff7e0;
+  padding: 5px 5px 5px 5px ;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quote-author {
+  color: #777;
+}
