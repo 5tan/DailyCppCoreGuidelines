@@ -1,4 +1,4 @@
-# DailyCppCoreGuidelines
+# [DailyCppCoreGuidelines](https://5tan.github.io/daily-cpp-core-guidelines/) 
 
 Allows to generate [DailyCppCoreGuidelines](https://5tan.github.io/daily-cpp-core-guidelines/) page from [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines) and static files.
 
