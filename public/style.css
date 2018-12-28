@@ -16,6 +16,7 @@ h5 {
 
 nav {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 hr {
@@ -23,7 +24,7 @@ hr {
 }
 
 .button {
-  background-color: #fff7e0;
+  background-color: #fbebf1;
   padding: 5px 5px 5px 5px;
 }
 
@@ -39,6 +40,6 @@ hr {
 /* xs (for phones - screens less than 768px wide)*/
 @media (max-width: 768px) {
   #title {
-    font-size: 7vw;
+    font-size: 8vw;
   }
 }

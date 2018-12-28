@@ -8,20 +8,6 @@ var fs = require("fs"),
   commit = "",
   date = "";
 
-function FixLinks(md) {
-  function Replacer(match, group, offset, string) {
-    var pre = "](https://github.com/isocpp/CppCoreGuidelines/blob/" + commit + "/",
-      post = ")";
-    if (!RegExp('^(?:[a-z]+:)?//', 'i').test(group)) { // if link is not absolute
-      if (group[0] === '#') // if link to local anchor
-        return pre + "CppCoreGuidelines.md" + group + post;
-      return pre + group + post;
-    }
-    return match;
-  }
-  return md.replace(/]\((.*?)\)/gm, Replacer);
-};
-
 path = process.argv[2];
 commit = execSync('git --git-dir ' + path + '/.git log -1 --format="%H"').toString().trim();
 date = execSync('git --git-dir ' + path + '/.git log -1 --format="%cd"').toString().trim();
@@ -31,7 +17,7 @@ sections = (content + "\n# <a name=\"S-").match(/(^# <a name=\"S-\s*).*?(?=\s*^#
 sections.forEach(function(s, i, array) {
   var tmp = (s + (i + 1 == array.length ? "\n### <a name=\"" : "")).match(/(^### <a name=\"\s*).*?(?=\s*^### <a name=\")/gsm);
   if (tmp == null) return;
-  tmp.forEach(function(g) { guidelines.push(FixLinks(g)); });
+  tmp.forEach(function(g) { guidelines.push(g); });
 });
 
 console.log(

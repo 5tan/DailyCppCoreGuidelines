@@ -29,6 +29,14 @@ var front = function() {
     return Math.floor(GetUnixDay() % g_guidelines.length);
   }
 
+  this.FixLinks = function() {
+    var anchors = document.getElementById("guideline").getElementsByTagName("a"),
+      topurl = "https://github.com/isocpp/CppCoreGuidelines/blob/" + g_commit + "/CppCoreGuidelines.md";
+    for (var i = 0; i < anchors.length; i++) {
+      anchors[i].href = anchors[i].href.replace(window.location.href, topurl);
+    }
+  }
+
   this.Update = function() {
     document.getElementById("current_guideline").innerHTML = this.current_guideline;
     document.getElementById("todays_guideline").innerHTML = TodaysGuideline();
@@ -45,11 +53,10 @@ var front = function() {
     document.getElementById("commit").href = "https://github.com/isocpp/CppCoreGuidelines/commit/" + g_commit;
 
     document.getElementById("guideline").innerHTML = (new showdown.Converter()).makeHtml(g_guidelines[this.current_guideline]);
+    FixLinks();
+    hljs.initHighlightingOnLoad();
   }
 
-
   this.current_guideline = Number(getUrlParam("guideline", TodaysGuideline())) % g_guidelines.length;
-
   Update();
-  hljs.initHighlightingOnLoad();
 }();
