@@ -1,6 +1,6 @@
-# [DailyCppCoreGuidelines](https://5tan.github.io/daily-cpp-core-guidelines/) 
+# [DailyCppCoreGuidelines](https://5tan.github.io/DailyCppCoreGuidelines/) 
 
-Generate [DailyCppCoreGuidelines](https://5tan.github.io/daily-cpp-core-guidelines/) page from [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines) and static files.
+Generate [DailyCppCoreGuidelines](https://5tan.github.io/DailyCppCoreGuidelines/) page from [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines) and static files.
 
 ## Usage
 
